@@ -1,0 +1,22 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Check-in</h1>
+  <form action="http://localhost:5000/result" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter the event name:<br>
+          <input type="text" id="event" size="80">
+      </p>
+      <p><input type="submit" id="submitButton" value="Submit"></p>
+      <a href="/my-link/">Click me</a>
+  </form>
+  <body>
+    {% if hasField %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Hello2</h1>
+    {% endif %}
+  </body>
+{% endblock %}
